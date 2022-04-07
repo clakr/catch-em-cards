@@ -1,2 +1,2 @@
 # CatchEmCards
-This repository is for a coding challenge
+Coding Challenge - Week 1

@@ -1,0 +1,177 @@
+/* CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Styles */
+
+@font-face {
+  font-family: Grifter;
+  src: url(assets/grifterbold.otf);
+}
+
+@font-face {
+  font-family: Eudoxus Sans;
+  src: url(assets/EudoxusSans-Regular.ttf);
+}
+
+:root {
+  --wafer: #e0d9cc;
+  --black: #000000;
+  --sienna: #f08261;
+}
+
+section {
+  height: 100vh;
+}
+
+#easy {
+  background-color: var(--wafer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#easy .card {
+  width: 575px;
+  height: 660px;
+  background-color: var(--black);
+  color: var(--wafer);
+  padding: 50px;
+}
+
+p {
+  font-family: Grifter;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 32px;
+  line-height: 33px;
+}
+
+.card img {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.card-desc {
+  font-size: 52px;
+  line-height: 54px;
+}
+
+.card-cta-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-cta-container div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.cta-heading {
+  font-size: 22px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+}
+
+.cta-desc {
+  font-family: Eudoxus Sans;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.cta-link {
+  font-family: Grifter;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.cta-link::after {
+  content: url(assets/Arrow1.svg);
+  position: absolute;
+  margin-left: 0.5em;
+}
