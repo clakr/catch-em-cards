@@ -116,6 +116,8 @@ section {
   width: 574px;
   font-family: Grifter;
   position: relative;
+  opacity: 0;
+  transform: translateX(50%);
 }
 
 #easy .card {
@@ -211,11 +213,16 @@ section {
   color: inherit;
   text-decoration: none;
   position: relative;
+  transition: transform 1s;
 }
 
 .cta-link::after {
   position: absolute;
   margin-left: 0.5em;
+}
+
+.cta-link:hover {
+  transform: translateX(10%);
 }
 
 #easy .cta-link::after {
@@ -228,4 +235,17 @@ section {
 
 #hard .cta-link::after {
   content: url(assets/Arrow3.svg);
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
