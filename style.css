@@ -96,19 +96,41 @@ section {
   height: 100vh;
 }
 
-#easy {
-  background-color: var(--wafer);
+main section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#easy .card {
+#easy {
+  background-color: var(--wafer);
+}
+
+#medium {
+  background-color: var(--black);
+}
+
+.card {
   width: 575px;
   height: 660px;
+  padding: 50px;
+  position: relative;
+}
+
+#medium .badge {
+  position: absolute;
+  top: -25%;
+  right: -5%;
+}
+
+#easy .card {
   background-color: var(--black);
   color: var(--wafer);
-  padding: 50px;
+}
+
+#medium .card {
+  background-color: var(--wafer);
+  color: var(--black);
 }
 
 p {
@@ -126,7 +148,7 @@ p {
   line-height: 33px;
 }
 
-.card img {
+.card .bolt {
   margin-top: 60px;
   margin-bottom: 24px;
 }
@@ -171,7 +193,14 @@ p {
 }
 
 .cta-link::after {
-  content: url(assets/Arrow1.svg);
   position: absolute;
   margin-left: 0.5em;
+}
+
+#easy .cta-link::after {
+  content: url(assets/Arrow1.svg);
+}
+
+#medium .cta-link::after {
+  content: url(assets/Arrow2.svg);
 }
