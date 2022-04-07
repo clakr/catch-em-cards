@@ -318,5 +318,6 @@ section {
 @media only screen and (min-height: 800px) {
   #hard .card-content > div:first-of-type {
     flex-direction: column;
+    gap: 2em;
   }
 }
