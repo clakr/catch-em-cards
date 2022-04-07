@@ -92,15 +92,14 @@ select {
   --sienna: #f08261;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 section {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #easy {
@@ -119,9 +118,7 @@ section {
   height: 662px;
   width: 574px;
   font-family: Grifter;
-  position: relative;
-  opacity: 0;
-  transform: translateX(50%);
+  position: absolute;
 }
 
 #easy .card {
@@ -246,6 +243,11 @@ section {
 }
 
 @keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
   75% {
     transform: translateX(-5%);
   }
@@ -253,5 +255,68 @@ section {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .card {
+    height: 90%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-img {
+    height: 25%;
+  }
+
+  #medium .badge {
+    width: 50%;
+    top: -12%;
+    right: -7%;
+  }
+
+  .bolt {
+    margin: auto;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+  }
+
+  .card-desc {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .card-cta-container,
+  .card-cta-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card-cta-container {
+    gap: 2em;
+  }
+
+  #hard .card {
+    height: 90%;
+  }
+
+  #hard .card-content > div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-height: 800px) {
+  #hard .card-content > div:first-of-type {
+    flex-direction: column;
   }
 }
